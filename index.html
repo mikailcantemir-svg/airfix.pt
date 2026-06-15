@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AirFix.pt | Ar Condicionado, AVAC e Climatização</title>
+  <meta name="description" content="Instalação, manutenção e reparação de ar condicionado. Serviço profissional de AVAC para casas, apartamentos, lojas e empresas. Orçamento rápido por WhatsApp." />
+
+  <style>
+    :root {
+      --primary: #00AEEF;
+      --primary-dark: #0077B6;
+      --accent: #FF8A00;
+      --dark: #071827;
+      --text: #1E293B;
+      --muted: #64748B;
+      --light: #F8FAFC;
+      --white: #FFFFFF;
+      --success: #16A34A;
+      --danger: #EF4444;
+      --shadow: 0 20px 50px rgba(2, 12, 27, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s ease;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #FFB000);
+      color: #111827;
+      box-shadow: 0 12px 30px rgba(255, 138, 0, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(255, 138, 0, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.14);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.28);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.24);
+      transform: translateY(-3px);
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 48px;
+    }
+
+    .eyebrow {
+      color: var(--primary-dark);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.12;
+      color: var(--dark);
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      letter-spacing: -2px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      letter-spacing: -1px;
+    }
+
+    h3 {
+      font-size: 23px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    /* Header */
+    .topbar {
+      background: var(--dark);
+      color: var(--white);
+      font-size: 14px;
+      padding: 9px 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .topbar span {
+      color: #BEEBFF;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 950;
+      font-size: 26px;
+      color: var(--dark);
+      letter-spacing: -1px;
+    }
+
+    .logo-mark {
+      width: 45px;
+      height: 45px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      display: grid;
+      place-items: center;
+      color: white;
+      box-shadow: 0 10px 24px rgba(0, 174, 239, 0.3);
+      font-size: 22px;
+    }
+
+    .logo span {
+      color: var(--primary-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    .menu-btn {
+      display: none;
+      background: var(--dark);
+      color: white;
+      border: none;
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 820px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0,174,239,0.22), transparent 28%),
+        radial-gradient(circle at 85% 30%, rgba(255,138,0,0.18), transparent 30%),
+        linear-gradient(135deg, #071827 0%, #0B2A44 55%, #063B5C 100%);
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .hero h1 {
+      color: white;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #7FDBFF;
+    }
+
+    .hero-subtitle {
+      font-size: 21px;
+      color: #D8F3FF;
+      margin-bottom: 28px;
+      max-width: 650px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.12);
+      color: #EAFBFF;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.28);
+      border-radius: 30px;
+      padding: 28px;
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-card-inner {
+      background: white;
+      border-radius: 24px;
+      padding: 28px;
+      color: var(--dark);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #DCFCE7;
+      color: #166534;
+      padding: 9px 13px;
+      border-radius: 999px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .pulse-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 0 rgba(22, 163, 74, 0.7);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+      70% { box-shadow: 0 0 0 12px rgba(22, 163, 74, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+    }
+
+    .hero-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .mini-list {
+      list-style: none;
+      margin-top: 20px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-list li {
+      display: flex;
+      gap: 10px;
+      color: #334155;
+      font-weight: 700;
+    }
+
+    .mini-list li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: 950;
+    }
+
+    /* Trust bar */
+    .trust {
+      margin-top: -45px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .trust-grid {
+      background: white;
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .trust-item {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .trust-number {
+      font-size: 34px;
+      font-weight: 950;
+      color: var(--primary-dark);
+    }
+
+    .trust-item p {
+      font-weight: 700;
+      color: #475569;
+    }
+
+    /* Cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 12px 35px rgba(15,23,42,0.08);
+      border: 1px solid rgba(15,23,42,0.07);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(0,174,239,0.15), rgba(0,119,182,0.08));
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    /* Services */
+    .services {
+      background: white;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    /* CTA band */
+    .cta-band {
+      background: linear-gradient(135deg, var(--primary-dark), var(--dark));
+      color: white;
+      border-radius: 34px;
+      padding: 46px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-band h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .cta-band p {
+      color: #D8F3FF;
+      font-size: 18px;
+    }
+
+    .cta-band .btn {
+      justify-self: end;
+    }
+
+    /* Process */
+    .process {
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-weight: 950;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+    }
+
+    /* Calculator */
+    .calculator {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(0,174,239,0.12), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(255,138,0,0.12), transparent 30%),
+        #EEF8FC;
+    }
+
+    .calc-box {
+      background: white;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    label {
+      font-weight: 850;
+      color: var(--dark);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    select, input, textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 14px;
+      border: 1px solid #CBD5E1;
+      font-size: 16px;
+      outline: none;
+      margin-bottom: 18px;
+      background: white;
+    }
+
+    select:focus, input:focus, textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(0,174,239,0.12);
+    }
+
+    .estimate {
+      background: linear-gradient(135deg, var(--dark), #0B3E5D);
+      color: white;
+      border-radius: 26px;
+      padding: 30px;
+    }
+
+    .estimate p {
+      color: #CDEFFF;
+    }
+
+    .price {
+      font-size: 46px;
+      font-weight: 950;
+      color: #7FDBFF;
+      margin: 14px 0;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      height: 230px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #E0F7FF, #F8FAFC);
+      border: 1px solid rgba(15,23,42,0.08);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 18px;
+      font-weight: 900;
+      color: var(--primary-dark);
+      position: relative;
+    }
+
+    .gallery-item span {
+      font-size: 44px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* Reviews */
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stars {
+      color: #F59E0B;
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    .person {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 950;
+    }
+
+    /* FAQ */
+    .faq {
+      background: white;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--light);
+      border-radius: 18px;
+      border: 1px solid rgba(15,23,42,0.08);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px;
+      cursor: pointer;
+      font-weight: 900;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.25s ease;
+      padding: 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 220px;
+      padding: 0 20px 20px;
+    }
+
+    .faq-question span {
+      color: var(--primary-dark);
+      font-size: 24px;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+    }
+
+    .contact-info {
+      background: linear-gradient(135deg, var(--dark), var(--primary-dark));
+      border-radius: 30px;
+      padding: 34px;
+      color: white;
+    }
+
+    .contact-info h2 {
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    .contact-info p {
+      color: #D8F3FF;
+      margin-bottom: 24px;
+    }
+
+    .contact-line {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+
+    .form-card {
+      background: white;
+      padding: 34px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 42px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      color: #AFC7D6;
+    }
+
+    /* Floating WhatsApp */
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 9999;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 31px;
+      box-shadow: 0 14px 35px rgba(37, 211, 102, 0.4);
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    .mobile-cta {
+      display: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 950px) {
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 25px;
+        box-shadow: var(--shadow);
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        padding: 55px 0 100px;
+      }
+
+      .trust-grid,
+      .grid-3,
+      .calc-box,
+      .contact-grid,
+      .cta-band {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-band .btn {
+        justify-self: start;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mobile-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9998;
+        background: white;
+        padding: 12px;
+        box-shadow: 0 -12px 30px rgba(15,23,42,0.15);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .mobile-cta a {
+        text-align: center;
+        padding: 13px 10px;
+        border-radius: 14px;
+        font-weight: 900;
+      }
+
+      .mobile-cta .call {
+        background: var(--dark);
+        color: white;
+      }
+
+      .mobile-cta .whatsapp {
+        background: #25D366;
+        color: white;
+      }
+
+      .floating-whatsapp {
+        display: none;
+      }
+
+      body {
+        padding-bottom: 78px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .section {
+        padding: 65px 0;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .trust-grid {
+        padding: 20px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-band,
+      .calc-box,
+      .form-card,
+      .contact-info {
+        padding: 26px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>Serviço de ar condicionado, AVAC e climatização</div>
+      <div><span>Orçamento rápido:</span> 932 504 112</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">
+        <div class="logo-mark">❄</div>
+        Air<span>Fix.pt</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#servicos">Serviços</a>
+        <a href="#vantagens">Vantagens</a>
+        <a href="#orcamento">Orçamento</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <div class="eyebrow" style="color:#7FDBFF;">Instalação • Manutenção • Reparação</div>
+          <h1>Ar condicionado sem complicações, com serviço <span>rápido e profissional.</span></h1>
+          <p class="hero-subtitle">
+            A AirFix.pt ajuda-o a ter uma casa mais confortável, eficiente e preparada para o verão e inverno.
+            Instalação, manutenção e reparação de ar condicionado para particulares e empresas.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20ar%20condicionado." target="_blank">
+              Pedir orçamento por WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="tel:+351932504112">
+              Ligar agora
+            </a>
+          </div>
+
+          <div class="hero-badges">
+            <div class="badge">✓ Orçamento rápido</div>
+            <div class="badge">✓ Trabalho limpo</div>
+            <div class="badge">✓ Técnicos profissionais</div>
+            <div class="badge">✓ Casas e empresas</div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <div class="status">
+              <div class="pulse-dot"></div>
+              Disponível para novos serviços
+            </div>
+
+            <h3>Precisa de instalar ou reparar o ar condicionado?</h3>
+            <p>
+              Envie uma mensagem com fotos do espaço, localização e tipo de serviço.
+              Respondemos com orientação clara e orçamento.
+            </p>
+
+            <ul class="mini-list">
+              <li>Instalação de splits e multisplits</li>
+              <li>Manutenção preventiva</li>
+              <li>Limpeza e higienização</li>
+              <li>Diagnóstico de avarias</li>
+              <li>Substituição de equipamentos</li>
+            </ul>
+
+            <a class="btn btn-primary" style="margin-top:24px; width:100%;" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20ar%20condicionado." target="_blank">
+              Falar com técnico
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-number">24h</div>
+            <p>Resposta rápida</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-number">100%</div>
+            <p>Foco no cliente</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-number">AVAC</div>
+            <p>Serviço técnico</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-number">PT</div>
+            <p>Atendimento local</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="servicos">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">O que fazemos</div>
+          <h2>Serviços de climatização para casas, lojas e empresas</h2>
+          <p>
+            Serviço completo para quem quer conforto, eficiência energética e um trabalho bem feito.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card service-card">
+            <div class="icon">❄️</div>
+            <h3>Instalação de Ar Condicionado</h3>
+            <p>Instalação de equipamentos split, multisplit e soluções adequadas ao espaço.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon">🧰</div>
+            <h3>Manutenção Preventiva</h3>
+            <p>Limpeza, verificação de funcionamento, filtros, drenagem e desempenho geral.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon">🔧</div>
+            <h3>Reparação de Avarias</h3>
+            <p>Diagnóstico técnico para equipamentos que não arrefecem, pingam água ou fazem ruído.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon">🫧</div>
+            <h3>Limpeza e Higienização</h3>
+            <p>Melhore a qualidade do ar e reduza maus cheiros, poeiras e bactérias acumuladas.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon">🏠</div>
+            <h3>Climatização Residencial</h3>
+            <p>Soluções para quartos, salas, apartamentos, moradias e alojamentos locais.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon">🏢</div>
+            <h3>Empresas e Lojas</h3>
+            <p>Serviços para escritórios, comércio, restaurantes, clínicas e pequenos negócios.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="vantagens">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Porquê escolher a AirFix.pt?</div>
+          <h2>O cliente quer confiança antes de pedir orçamento</h2>
+          <p>
+            O site tem de vender segurança. Por isso mostramos logo o que interessa: rapidez, clareza e profissionalismo.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Resposta rápida</h3>
+            <p>O cliente pode enviar mensagem direta por WhatsApp sem preencher formulários complicados.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🧼</div>
+            <h3>Trabalho limpo</h3>
+            <p>Instalações cuidadas, organização no local e respeito pela casa do cliente.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">💬</div>
+            <h3>Explicação clara</h3>
+            <p>O cliente percebe o que vai ser feito, quanto pode custar e qual a melhor solução.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Quer ar condicionado instalado sem dores de cabeça?</h2>
+            <p>Envie fotos do local por WhatsApp e receba uma resposta rápida.</p>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20instalar%20ar%20condicionado.%20Podem%20ajudar%3F" target="_blank">
+            Pedir orçamento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Processo simples</div>
+          <h2>Como funciona</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card step">
+            <h3>Envia o pedido</h3>
+            <p>Contacte por WhatsApp e envie fotos ou vídeos do local onde pretende instalar ou reparar.</p>
+          </div>
+
+          <div class="card step">
+            <h3>Avaliamos a solução</h3>
+            <p>Analisamos o espaço, o tipo de equipamento e as condições de instalação.</p>
+          </div>
+
+          <div class="card step">
+            <h3>Executamos o serviço</h3>
+            <p>Marcamos o serviço, fazemos o trabalho com cuidado e deixamos tudo organizado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section calculator" id="orcamento">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Simulador rápido</div>
+          <h2>Tenha uma ideia inicial do serviço</h2>
+          <p>Este valor é apenas indicativo. O orçamento final depende do equipamento, distância, tubagem e condições do local.</p>
+        </div>
+
+        <div class="calc-box">
+          <div>
+            <label for="serviceType">Tipo de serviço</label>
+            <select id="serviceType" onchange="calculateEstimate()">
+              <option value="install">Instalação de ar condicionado</option>
+              <option value="maintenance">Manutenção / limpeza</option>
+              <option value="repair">Diagnóstico / reparação</option>
+              <option value="multi">Instalação multisplit</option>
+            </select>
+
+            <label for="units">Número de equipamentos</label>
+            <select id="units" onchange="calculateEstimate()">
+              <option value="1">1 equipamento</option>
+              <option value="2">2 equipamentos</option>
+              <option value="3">3 equipamentos</option>
+              <option value="4">4 equipamentos ou mais</option>
+            </select>
+
+            <label for="propertyType">Tipo de local</label>
+            <select id="propertyType" onchange="calculateEstimate()">
+              <option value="house">Casa / apartamento</option>
+              <option value="store">Loja / escritório</option>
+              <option value="company">Empresa / espaço comercial</option>
+            </select>
+          </div>
+
+          <div class="estimate">
+            <h3 style="color:white;">Estimativa inicial</h3>
+            <div class="price" id="estimatePrice">desde 180€</div>
+            <p id="estimateText">
+              Valor indicativo para instalação simples de 1 equipamento.
+            </p>
+            <a class="btn btn-primary" style="margin-top:22px;" id="estimateWhatsapp" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20ar%20condicionado." target="_blank">
+              Confirmar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trabalhos">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Trabalhos recentes</div>
+          <h2>Mostre aqui fotos reais dos seus serviços</h2>
+          <p>
+            Quando tiver fotos reais, substitua estes blocos por imagens de instalações, manutenções e reparações.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item"><div><span>❄️</span>Instalação split</div></div>
+          <div class="gallery-item"><div><span>🔧</span>Reparação técnica</div></div>
+          <div class="gallery-item"><div><span>🫧</span>Limpeza interior</div></div>
+          <div class="gallery-item"><div><span>🏠</span>Climatização casa</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Opiniões</div>
+          <h2>O que os clientes valorizam</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card review-card">
+            <div class="stars">★★★★★</div>
+            <p>“Serviço rápido, limpo e muito profissional. Explicaram tudo antes de fazer o trabalho.”</p>
+            <div class="person">
+              <div class="avatar">M</div>
+              <div>
+                <strong>Cliente residencial</strong>
+                <p>Instalação de AC</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card review-card">
+            <div class="stars">★★★★★</div>
+            <p>“O ar condicionado fazia barulho e não arrefecia bem. Ficou resolvido no mesmo dia.”</p>
+            <div class="person">
+              <div class="avatar">A</div>
+              <div>
+                <strong>Cliente particular</strong>
+                <p>Reparação</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card review-card">
+            <div class="stars">★★★★★</div>
+            <p>“Gostei da clareza no orçamento e da limpeza depois da instalação.”</p>
+            <div class="person">
+              <div class="avatar">R</div>
+              <div>
+                <strong>Pequeno negócio</strong>
+                <p>Manutenção</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Perguntas frequentes</div>
+          <h2>Dúvidas comuns antes de pedir orçamento</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Quanto custa instalar ar condicionado?
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Depende do equipamento, distância entre unidade interior e exterior, tipo de parede, tubagem e acesso ao local. O melhor é enviar fotos por WhatsApp para receber uma estimativa mais correta.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Fazem manutenção e limpeza?
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Sim. A manutenção ajuda a melhorar o rendimento, reduzir consumos, evitar maus cheiros e prolongar a vida útil do equipamento.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              O meu ar condicionado pinga água. O que pode ser?
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Pode ser drenagem entupida, má inclinação, sujidade interna ou problema de instalação. É necessário avaliar no local.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Atendem empresas?
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Sim. Fazemos serviços para casas, apartamentos, escritórios, lojas e pequenos espaços comerciais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Fale com a AirFix.pt</h2>
+            <p>
+              Envie o seu pedido. Para resposta mais rápida, contacte por WhatsApp com fotos do local.
+            </p>
+
+            <div class="contact-line">📞 932 504 112</div>
+            <div class="contact-line">✉️ geral@airfix.pt</div>
+            <div class="contact-line">📍 Grande Lisboa e zonas próximas</div>
+            <div class="contact-line">🕒 Segunda a sábado</div>
+
+            <a class="btn btn-primary" style="margin-top:20px;" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20venho%20do%20site%20AirFix.pt%20e%20quero%20pedir%20um%20or%C3%A7amento." target="_blank">
+              Enviar WhatsApp
+            </a>
+          </div>
+
+          <div class="form-card">
+            <h3 style="margin-bottom:18px;">Pedido rápido</h3>
+
+            <form onsubmit="sendFormToWhatsapp(event)">
+              <label>Nome</label>
+              <input type="text" id="name" placeholder="O seu nome" required />
+
+              <label>Localidade</label>
+              <input type="text" id="location" placeholder="Ex: Lisboa, Almada, Sintra..." required />
+
+              <label>Tipo de serviço</label>
+              <select id="formService">
+                <option>Instalação de ar condicionado</option>
+                <option>Manutenção / limpeza</option>
+                <option>Reparação / avaria</option>
+                <option>Pedido para empresa</option>
+              </select>
+
+              <label>Mensagem</label>
+              <textarea id="message" placeholder="Explique o que precisa. Ex: quero instalar AC numa sala de 25m²..."></textarea>
+
+              <button class="btn btn-primary" type="submit" style="width:100%;">
+                Enviar pedido por WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="logo" style="color:white;">
+          <div class="logo-mark">❄</div>
+          Air<span>Fix.pt</span>
+        </div>
+        <p style="margin-top:10px;">Ar condicionado, AVAC e climatização.</p>
+      </div>
+
+      <p>© <span id="year"></span> AirFix.pt. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20ar%20condicionado." target="_blank">
+    ☎
+  </a>
+
+  <div class="mobile-cta">
+    <a class="call" href="tel:+351932504112">Ligar</a>
+    <a class="whatsapp" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20ar%20condicionado." target="_blank">WhatsApp</a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    function toggleFaq(element) {
+      const item = element.parentElement;
+      const allItems = document.querySelectorAll(".faq-item");
+
+      allItems.forEach(faq => {
+        if (faq !== item) {
+          faq.classList.remove("active");
+        }
+      });
+
+      item.classList.toggle("active");
+    }
+
+    function calculateEstimate() {
+      const service = document.getElementById("serviceType").value;
+      const units = Number(document.getElementById("units").value);
+      const property = document.getElementById("propertyType").value;
+
+      let base = 180;
+      let text = "";
+
+      if (service === "install") {
+        base = 180 * units;
+        text = "Valor indicativo para instalação simples. Pode variar conforme tubagem, distância e acesso.";
+      }
+
+      if (service === "maintenance") {
+        base = 55 * units;
+        text = "Valor indicativo para manutenção e limpeza simples de equipamento.";
+      }
+
+      if (service === "repair") {
+        base = 45;
+        text = "Valor indicativo para diagnóstico. Reparações e peças são avaliadas à parte.";
+      }
+
+      if (service === "multi") {
+        base = 350 + (units * 120);
+        text = "Valor indicativo para instalação multisplit. Necessita sempre de avaliação.";
+      }
+
+      if (property === "store") {
+        base += 30;
+      }
+
+      if (property === "company") {
+        base += 60;
+      }
+
+      document.getElementById("estimatePrice").textContent = "desde " + base + "€";
+      document.getElementById("estimateText").textContent = text;
+
+      const serviceText = document.getElementById("serviceType").selectedOptions[0].textContent;
+      const unitsText = document.getElementById("units").selectedOptions[0].textContent;
+      const propertyText = document.getElementById("propertyType").selectedOptions[0].textContent;
+
+      const msg = `Olá, quero confirmar um orçamento AirFix.pt.%0A%0AServiço: ${serviceText}%0AQuantidade: ${unitsText}%0ALocal: ${propertyText}%0AEstimativa vista no site: desde ${base}€`;
+      document.getElementById("estimateWhatsapp").href = "https://wa.me/351932504112?text=" + msg;
+    }
+
+    function sendFormToWhatsapp(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const location = document.getElementById("location").value;
+      const service = document.getElementById("formService").value;
+      const message = document.getElementById("message").value;
+
+      const whatsappMessage =
+        `Olá, venho do site AirFix.pt.%0A%0A` +
+        `Nome: ${encodeURIComponent(name)}%0A` +
+        `Localidade: ${encodeURIComponent(location)}%0A` +
+        `Serviço: ${encodeURIComponent(service)}%0A` +
+        `Mensagem: ${encodeURIComponent(message)}`;
+
+      window.open("https://wa.me/351932504112?text=" + whatsappMessage, "_blank");
+    }
+  </script>
+
+</body>
+</html>
