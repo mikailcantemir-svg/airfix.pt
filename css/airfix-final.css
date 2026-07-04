@@ -1610,7 +1610,6 @@ a { color: inherit; text-decoration: none; }
   border-radius: 50%;
   box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45);
   transition: transform 0.2s;
-  animation: af-wa-pulse 2.8s ease-in-out infinite;
 }
 
 .floating-wa:hover {
@@ -1704,133 +1703,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 2rem;
   margin: 0;
 }
-
-@keyframes af-spin-soft {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes af-wrench-work {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-12deg); }
-  50% { transform: rotate(8deg); }
-  75% { transform: rotate(-6deg); }
-}
-
-@keyframes af-float-clean {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-5px) scale(1.06); }
-}
-
-@keyframes af-pulse-soft {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.12); opacity: 0.86; }
-}
-
-@keyframes af-bolt-flash {
-  0%, 100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 0 rgba(29, 161, 242, 0));
-  }
-  50% {
-    transform: scale(1.14);
-    filter: drop-shadow(0 0 8px rgba(29, 161, 242, 0.35));
-  }
-}
-
-@keyframes af-shield-breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-}
-
-@keyframes af-wa-pulse {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45);
-  }
-  50% {
-    transform: scale(1.04);
-    box-shadow: 0 14px 38px rgba(37, 211, 102, 0.58);
-  }
-}
-
-.trust-icon i,
-.icon-badge i,
-.service-icon i,
-.service-card i,
-.icone-container i,
-.trust-card i,
-.hero-note i {
-  display: inline-block;
-  transform-origin: 50% 50%;
-  will-change: transform;
-}
-
-.icone-container i[class*="icon-"]::before,
-.trust-card i[class*="icon-"]::before,
-.service-card i[class*="icon-"]::before,
-.hero-note i[class*="icon-"]::before {
-  display: inline-block;
-}
-
-.icon-install,
-.service-card .fa-fan,
-.icone-container .icon-install {
-  animation: af-spin-soft 3.8s linear infinite;
-}
-
-.icon-maintenance,
-.icon-repair,
-.service-card .fa-wrench,
-.service-card .fa-screwdriver-wrench,
-.service-card .fa-clipboard-check,
-.icone-container .icon-maintenance,
-.icone-container .icon-repair {
-  animation: af-wrench-work 2.2s ease-in-out infinite;
-  transform-origin: center;
-}
-
-.icon-clean,
-.service-card .fa-hand-sparkles,
-.service-card .fa-spray-can-sparkles,
-.icone-container .icon-clean {
-  animation: af-float-clean 2.4s ease-in-out infinite;
-}
-
-.icon-fast,
-.hero-note .fa-bolt,
-.hero-note i.icon-fast,
-.trust-card .icon-fast,
-.icone-container .icon-fast {
-  animation: af-bolt-flash 1.8s ease-in-out infinite;
-}
-
-.icon-guarantee,
-.trust-card .fa-shield-halved,
-.icone-container .icon-guarantee {
-  animation: af-shield-breathe 2.6s ease-in-out infinite;
-}
-
-.icon-technician,
-.trust-card .fa-hard-hat,
-.icone-container .icon-technician {
-  animation: af-pulse-soft 2.8s ease-in-out infinite;
-}
-
-.icon-business,
-.service-card .fa-building,
-.icone-container .icon-business {
-  animation: af-pulse-soft 3.2s ease-in-out infinite;
-}
-
-/* Aliases legados */
-.anim-girar { animation: af-spin-soft 3.8s linear infinite; }
-.anim-trabalhar {
-  animation: af-wrench-work 2.2s ease-in-out infinite;
-  transform-origin: center;
-}
-.anim-flutuar { animation: af-float-clean 2.4s ease-in-out infinite; }
-.anim-pulsar { animation: af-pulse-soft 3.2s ease-in-out infinite; }
 
 /* —— Animations —— */
 .fade-in {
@@ -2139,5 +2011,187 @@ button:focus-visible {
 @media (max-width: 420px) {
   .zones-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* —— Microanimações dos ícones (tipo GIF premium) —— */
+@keyframes af-spin-soft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes af-wrench-work {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-12deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes af-float-clean {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.06);
+  }
+}
+
+@keyframes af-pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.10);
+    opacity: 0.88;
+  }
+}
+
+@keyframes af-bolt-flash {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(29, 161, 242, 0));
+  }
+  50% {
+    transform: scale(1.14);
+    filter: drop-shadow(0 0 8px rgba(29, 161, 242, 0.38));
+  }
+}
+
+@keyframes af-shield-breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes af-wa-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.28);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 18px 42px rgba(37, 211, 102, 0.42);
+  }
+}
+
+/* Garante que só o ícone anima, não o cartão inteiro */
+.icone-container i,
+.trust-icon i,
+.icon-badge i,
+.service-icon i,
+.service-card .icone-container i,
+.hero-note i {
+  display: inline-block;
+  will-change: transform;
+  transform-origin: center;
+}
+
+/* Font Awesome 6: glifo no ::before */
+.icone-container i[class*="icon-"]::before,
+.trust-card i[class*="icon-"]::before,
+.service-card .icone-container i[class*="icon-"]::before,
+.hero-note i[class*="icon-"]::before {
+  display: inline-block;
+  transform-origin: center;
+}
+
+/* Instalação / ventilação */
+.icon-install,
+.fa-fan.icon-install,
+.service-card .fa-fan {
+  animation: af-spin-soft 3.8s linear infinite;
+}
+
+/* Manutenção / reparação */
+.icon-maintenance,
+.icon-repair,
+.fa-wrench.icon-maintenance,
+.fa-clipboard-check.icon-maintenance,
+.fa-screwdriver-wrench.icon-repair,
+.service-card .fa-wrench,
+.service-card .fa-clipboard-check,
+.service-card .fa-screwdriver-wrench {
+  animation: af-wrench-work 2.2s ease-in-out infinite;
+}
+
+/* Limpeza / higienização */
+.icon-clean,
+.fa-hand-sparkles.icon-clean,
+.fa-spray-can-sparkles.icon-clean,
+.service-card .fa-hand-sparkles,
+.service-card .fa-spray-can-sparkles,
+.anim-flutuar {
+  animation: af-float-clean 2.4s ease-in-out infinite;
+}
+
+/* Resposta rápida */
+.icon-fast,
+.fa-bolt.icon-fast,
+.hero-note .fa-bolt,
+.service-card .fa-bolt {
+  animation: af-bolt-flash 1.8s ease-in-out infinite;
+}
+
+/* Garantia */
+.icon-guarantee,
+.fa-shield-halved.icon-guarantee,
+.fa-circle-check.icon-guarantee {
+  animation: af-shield-breathe 2.6s ease-in-out infinite;
+}
+
+/* Técnico */
+.icon-technician,
+.fa-hard-hat.icon-technician,
+.fa-helmet-safety.icon-technician {
+  animation: af-pulse-soft 2.8s ease-in-out infinite;
+}
+
+/* Empresas */
+.icon-business,
+.fa-building.icon-business {
+  animation: af-pulse-soft 3.2s ease-in-out infinite;
+}
+
+/* WhatsApp flutuante */
+.floating-whatsapp,
+.whatsapp-float,
+.floating-wa {
+  animation: af-wa-pulse 2.4s ease-in-out infinite;
+}
+
+.floating-wa:hover {
+  animation: none;
+}
+
+/* Acessibilidade — ícones */
+@media (prefers-reduced-motion: reduce) {
+  .icone-container i,
+  .trust-icon i,
+  .icon-badge i,
+  .service-icon i,
+  .service-card .icone-container i,
+  .hero-note i,
+  .floating-whatsapp,
+  .whatsapp-float,
+  .floating-wa {
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
   }
 }
