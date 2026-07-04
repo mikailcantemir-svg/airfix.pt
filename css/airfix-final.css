@@ -263,16 +263,38 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 0.15rem;
 }
 
-.site-header__phone {
+.header-phone {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-weight: 600;
+  gap: 8px;
+  color: var(--blue-dark);
+  font-weight: 700;
+  text-decoration: none;
   font-size: 0.9rem;
-  color: var(--text-muted);
+  flex-shrink: 0;
 }
 
-.site-header__phone svg { width: 1.1rem; height: 1.1rem; fill: var(--blue-mid); }
+.header-phone i,
+.fa-solid.fa-phone {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--blue-dark);
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-header__mobile-cta .fa-phone,
+.footer-grid a[href^="tel:"] .fa-phone,
+.mobile-bar a[href^="tel:"] .fa-phone {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.footer-grid a[href^="tel:"] .fa-phone {
+  width: 1rem;
+  text-align: center;
+}
 
 .site-header__menu-btn {
   display: flex;
@@ -372,7 +394,7 @@ a { color: inherit; text-decoration: none; }
     gap: 0.75rem;
   }
 
-  .site-header__phone {
+  .header-phone {
     font-size: 0.82rem;
   }
 
@@ -1426,12 +1448,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 .mobile-bar a:hover { background: rgba(255, 255, 255, 0.06); }
-
-.mobile-bar a svg {
-  width: 22px;
-  height: 22px;
-  fill: currentColor;
-}
 
 .mobile-bar a i {
   font-size: 1.2rem;
