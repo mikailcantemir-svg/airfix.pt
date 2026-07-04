@@ -13,10 +13,12 @@
     var menuBtn = document.getElementById('menuBtn');
     var mobileNav = document.getElementById('mobileNav');
     if (menuBtn && mobileNav) {
+      var menuOpenLabel = menuBtn.getAttribute('data-menu-open') || 'Abrir menu';
+      var menuCloseLabel = menuBtn.getAttribute('data-menu-close') || 'Fechar menu';
       function setMenuOpen(open) {
         mobileNav.classList.toggle('open', open);
         menuBtn.setAttribute('aria-expanded', String(open));
-        menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+        menuBtn.setAttribute('aria-label', open ? menuCloseLabel : menuOpenLabel);
       }
       menuBtn.addEventListener('click', function () {
         setMenuOpen(!mobileNav.classList.contains('open'));
