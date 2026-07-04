@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://airfix.pt/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://airfix.pt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airfix.pt/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://airfix.pt/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://airfix.pt/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airfix.pt/"/>
     <lastmod>2026-07-04</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://airfix.pt/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://airfix.pt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airfix.pt/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://airfix.pt/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://airfix.pt/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airfix.pt/"/>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://airfix.pt/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://airfix.pt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airfix.pt/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://airfix.pt/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://airfix.pt/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airfix.pt/"/>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://airfix.pt/es/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://airfix.pt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airfix.pt/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://airfix.pt/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://airfix.pt/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airfix.pt/"/>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://airfix.pt/ar-condicionado-empresas.html</loc>
