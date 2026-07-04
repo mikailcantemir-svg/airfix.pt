@@ -918,10 +918,6 @@ a { color: inherit; text-decoration: none; }
     font-size: 1.1rem;
   }
 
-  .trust-card .anim-flutuar {
-    animation: none;
-  }
-
   .trust-card span:last-child,
   .trust-item span:last-child {
     font-size: 0.94rem;
@@ -1659,44 +1655,107 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
 }
 
-@keyframes girar {
+@keyframes af-spin-soft {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-.anim-girar {
-  animation: girar 2s linear infinite;
+@keyframes af-wrench-work {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-12deg); }
+  50% { transform: rotate(8deg); }
+  75% { transform: rotate(-6deg); }
 }
 
-@keyframes martelar {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-20deg); }
-  50% { transform: rotate(10deg); }
-  75% { transform: rotate(-10deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.anim-trabalhar {
-  animation: martelar 1.5s ease-in-out infinite;
-}
-
-@keyframes flutuar {
+@keyframes af-float-clean {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-10px) scale(1.1); color: #7bed9f; }
+  50% { transform: translateY(-5px) scale(1.06); }
 }
 
-.anim-flutuar {
-  animation: flutuar 2s ease-in-out infinite;
+@keyframes af-pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.12); opacity: 0.86; }
 }
 
-@keyframes pulsar-temperatura {
-  0%, 100% { transform: scale(1); color: #38ada9; }
-  50% { transform: scale(1.2); color: #1DA1F2; }
+@keyframes af-bolt-flash {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(29, 161, 242, 0));
+  }
+  50% {
+    transform: scale(1.14);
+    filter: drop-shadow(0 0 8px rgba(29, 161, 242, 0.35));
+  }
 }
 
-.anim-pulsar {
-  animation: pulsar-temperatura 1.5s infinite;
+@keyframes af-shield-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
+
+.trust-icon i,
+.icon-badge i,
+.service-icon i,
+.service-card i,
+.icone-container i,
+.trust-card i,
+.hero-note i {
+  display: inline-block;
+  will-change: transform;
+}
+
+.icon-install,
+.service-card .fa-fan {
+  animation: af-spin-soft 3.8s linear infinite;
+}
+
+.icon-maintenance,
+.icon-repair,
+.service-card .fa-wrench,
+.service-card .fa-screwdriver-wrench,
+.service-card .fa-clipboard-check {
+  animation: af-wrench-work 2.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.icon-clean,
+.service-card .fa-hand-sparkles,
+.service-card .fa-spray-can-sparkles {
+  animation: af-float-clean 2.4s ease-in-out infinite;
+}
+
+.icon-fast,
+.hero-note .fa-bolt,
+.hero-note i.icon-fast,
+.trust-card .icon-fast {
+  animation: af-bolt-flash 1.8s ease-in-out infinite;
+}
+
+.icon-guarantee,
+.trust-card .fa-shield-halved,
+.fa-circle-check {
+  animation: af-shield-breathe 2.6s ease-in-out infinite;
+}
+
+.icon-technician,
+.fa-hard-hat,
+.fa-helmet-safety {
+  animation: af-pulse-soft 2.8s ease-in-out infinite;
+}
+
+.icon-business,
+.service-card .fa-building {
+  animation: af-pulse-soft 3.2s ease-in-out infinite;
+}
+
+/* Aliases legados */
+.anim-girar { animation: af-spin-soft 3.8s linear infinite; }
+.anim-trabalhar {
+  animation: af-wrench-work 2.2s ease-in-out infinite;
+  transform-origin: center;
+}
+.anim-flutuar { animation: af-float-clean 2.4s ease-in-out infinite; }
+.anim-pulsar { animation: af-pulse-soft 3.2s ease-in-out infinite; }
 
 /* —— Animations —— */
 .fade-in {
@@ -1717,7 +1776,17 @@ a { color: inherit; text-decoration: none; }
   .fade-in { opacity: 1; transform: none; transition: none; }
   .cool-air-effect { animation: none; }
   .btn:hover, .service-card:hover, .floating-wa:hover { transform: none; }
-  .anim-girar, .anim-trabalhar, .anim-flutuar, .anim-pulsar { animation: none; }
+  .trust-icon i,
+  .icon-badge i,
+  .service-icon i,
+  .service-card i,
+  .icone-container i,
+  .trust-card i,
+  .hero-note i {
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
+  }
 }
 
 a:focus-visible,
