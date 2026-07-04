@@ -43,4 +43,29 @@
     }, { threshold: 0.1 });
     fadeEls.forEach(function (el) { io.observe(el); });
   });
+
+  document.querySelectorAll('.language-switcher').forEach(function (switcher) {
+    var button = switcher.querySelector('.language-current');
+    if (!button || switcher.classList.contains('language-switcher--mobile')) return;
+
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      var isOpen = switcher.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!switcher.contains(event.target)) {
+        switcher.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        switcher.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
 })();
