@@ -1568,9 +1568,17 @@ a { color: inherit; text-decoration: none; }
   border-radius: 50%;
   box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45);
   transition: transform 0.2s;
+  animation: af-wa-pulse 2.8s ease-in-out infinite;
 }
 
-.floating-wa:hover { transform: scale(1.06); }
+.floating-wa:hover {
+  transform: scale(1.06);
+  animation: none;
+}
+
+.floating-wa i {
+  display: inline-block;
+}
 
 .floating-wa svg { width: 32px; height: 32px; fill: currentColor; }
 
@@ -1693,6 +1701,17 @@ a { color: inherit; text-decoration: none; }
   50% { transform: scale(1.08); }
 }
 
+@keyframes af-wa-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 14px 38px rgba(37, 211, 102, 0.58);
+  }
+}
+
 .trust-icon i,
 .icon-badge i,
 .service-icon i,
@@ -1701,11 +1720,20 @@ a { color: inherit; text-decoration: none; }
 .trust-card i,
 .hero-note i {
   display: inline-block;
+  transform-origin: 50% 50%;
   will-change: transform;
 }
 
+.icone-container i[class*="icon-"]::before,
+.trust-card i[class*="icon-"]::before,
+.service-card i[class*="icon-"]::before,
+.hero-note i[class*="icon-"]::before {
+  display: inline-block;
+}
+
 .icon-install,
-.service-card .fa-fan {
+.service-card .fa-fan,
+.icone-container .icon-install {
   animation: af-spin-soft 3.8s linear infinite;
 }
 
@@ -1713,38 +1741,43 @@ a { color: inherit; text-decoration: none; }
 .icon-repair,
 .service-card .fa-wrench,
 .service-card .fa-screwdriver-wrench,
-.service-card .fa-clipboard-check {
+.service-card .fa-clipboard-check,
+.icone-container .icon-maintenance,
+.icone-container .icon-repair {
   animation: af-wrench-work 2.2s ease-in-out infinite;
   transform-origin: center;
 }
 
 .icon-clean,
 .service-card .fa-hand-sparkles,
-.service-card .fa-spray-can-sparkles {
+.service-card .fa-spray-can-sparkles,
+.icone-container .icon-clean {
   animation: af-float-clean 2.4s ease-in-out infinite;
 }
 
 .icon-fast,
 .hero-note .fa-bolt,
 .hero-note i.icon-fast,
-.trust-card .icon-fast {
+.trust-card .icon-fast,
+.icone-container .icon-fast {
   animation: af-bolt-flash 1.8s ease-in-out infinite;
 }
 
 .icon-guarantee,
 .trust-card .fa-shield-halved,
-.fa-circle-check {
+.icone-container .icon-guarantee {
   animation: af-shield-breathe 2.6s ease-in-out infinite;
 }
 
 .icon-technician,
-.fa-hard-hat,
-.fa-helmet-safety {
+.trust-card .fa-hard-hat,
+.icone-container .icon-technician {
   animation: af-pulse-soft 2.8s ease-in-out infinite;
 }
 
 .icon-business,
-.service-card .fa-building {
+.service-card .fa-building,
+.icone-container .icon-business {
   animation: af-pulse-soft 3.2s ease-in-out infinite;
 }
 
@@ -1786,6 +1819,11 @@ a { color: inherit; text-decoration: none; }
     animation: none !important;
     transform: none !important;
     filter: none !important;
+  }
+
+  .floating-wa {
+    animation: none !important;
+    transform: none !important;
   }
 }
 
