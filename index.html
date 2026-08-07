@@ -398,6 +398,55 @@
       </div>
     </section>
 
+    <!--
+      Galeria #trabalhos: visível quando existir pelo menos um .work-card.
+      Originais em assets/trabalhos/_incoming/; WebP finais em assets/trabalhos/.
+    -->
+    <section class="section works-section" id="trabalhos">
+      <div class="container">
+        <header class="section-header fade-in">
+          <span class="section-eyebrow">Trabalhos reais</span>
+          <h2>Trabalhos realizados pela AirFix.pt</h2>
+          <p>Veja alguns dos nossos trabalhos de instalação, manutenção, limpeza e reparação de ar condicionado.</p>
+        </header>
+        <div class="works-grid fade-in" aria-label="Galeria de trabalhos realizados">
+          <article
+            class="work-card"
+            data-category="limpeza"
+            data-gallery='[
+              {"src":"assets/trabalhos/limpeza-ar-condicionado-higienizacao-espuma-01.webp","alt":"Higienização com espuma na unidade interior de ar condicionado em Brejos de Azeitão"},
+              {"src":"assets/trabalhos/limpeza-ar-condicionado-filtros-sujos-02.webp","alt":"Filtros de ar condicionado com pó acumulado antes da limpeza em Brejos de Azeitão"},
+              {"src":"assets/trabalhos/limpeza-ar-condicionado-filtro-sujo-03.webp","alt":"Filtro de ar condicionado muito sujo retirado para limpeza em Brejos de Azeitão"},
+              {"src":"assets/trabalhos/limpeza-ar-condicionado-unidade-aberta-04.webp","alt":"Unidade interior aberta com filtros sujos durante limpeza em Brejos de Azeitão"},
+              {"src":"assets/trabalhos/limpeza-ar-condicionado-serpentinas-05.webp","alt":"Serpentinas da unidade interior expostas para limpeza em Brejos de Azeitão"},
+              {"src":"assets/trabalhos/limpeza-ar-condicionado-unidade-apos-06.webp","alt":"Unidade interior com filtros limpos após higienização em Brejos de Azeitão"},
+              {"type":"video","src":"assets/trabalhos/limpeza-ar-condicionado-video-02.mp4","poster":"assets/trabalhos/limpeza-ar-condicionado-video-02-poster.webp","alt":"Vídeo da inspeção da unidade interior durante limpeza em Brejos de Azeitão"},
+              {"type":"video","src":"assets/trabalhos/limpeza-ar-condicionado-video-01.mp4","poster":"assets/trabalhos/limpeza-ar-condicionado-video-01-poster.webp","alt":"Vídeo do serviço de limpeza de ar condicionado em Brejos de Azeitão"}
+            ]'
+          >
+            <button type="button" class="work-card__trigger" aria-label="Ver fotografias e vídeos: Limpeza e higienização de ar condicionado em Brejos de Azeitão">
+              <span class="work-card__media">
+                <img
+                  class="work-card__image"
+                  src="assets/trabalhos/thumbs/limpeza-ar-condicionado-higienizacao-espuma-01.webp"
+                  alt="Limpeza e higienização de ar condicionado realizada em Brejos de Azeitão pela AirFix.pt"
+                  loading="lazy"
+                  width="900"
+                  height="675"
+                />
+              </span>
+              <span class="work-card__body">
+                <span class="work-card__category">Limpeza e higienização</span>
+                <span class="work-card__title">Limpeza e higienização de ar condicionado</span>
+                <span class="work-card__location">Brejos de Azeitão</span>
+                <span class="work-card__text">Serviço de limpeza e higienização de ar condicionado realizado em Brejos de Azeitão.</span>
+              </span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--gray" id="zonas">
       <div class="container">
         <header class="section-header fade-in">
@@ -586,6 +635,39 @@
       Orçamento
     </a>
   </nav>
+
+  <div
+    class="gallery-lightbox"
+    id="galleryLightbox"
+    hidden
+    role="dialog"
+    aria-modal="true"
+    aria-label="Galeria de fotografias"
+    data-label-close="Fechar galeria"
+    data-label-prev="Fotografia anterior"
+    data-label-next="Fotografia seguinte"
+  >
+    <div class="gallery-lightbox__backdrop" data-lightbox-close tabindex="-1"></div>
+    <div class="gallery-lightbox__panel">
+      <button type="button" class="gallery-lightbox__close" data-lightbox-close aria-label="Fechar galeria">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="gallery-lightbox__prev" aria-label="Fotografia anterior">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="gallery-lightbox__next" aria-label="Fotografia seguinte">
+        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </button>
+      <figure class="gallery-lightbox__figure">
+        <img class="gallery-lightbox__image" alt="" />
+        <video class="gallery-lightbox__video" controls playsinline preload="metadata" hidden></video>
+        <figcaption class="gallery-lightbox__caption">
+          <span class="gallery-lightbox__counter" aria-live="polite"></span>
+          <span class="gallery-lightbox__meta"></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
 
   <script src="js/airfix-site.js" defer></script>
 </body>
