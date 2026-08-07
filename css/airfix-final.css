@@ -1403,10 +1403,15 @@ a { color: inherit; text-decoration: none; }
 .about-section > .container > p,
 .about-content > p,
 .about-section__inner > p {
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.25rem;
   font-size: 1.1rem;
   color: var(--text-muted);
   line-height: 1.7;
+}
+
+.about-content > p.about-languages,
+.about-section__inner > p.about-languages {
+  margin-bottom: 2.5rem;
 }
 
 .about-trust {
