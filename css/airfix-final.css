@@ -451,10 +451,16 @@ a { color: inherit; text-decoration: none; }
 }
 
 .site-header__mobile-cta .fa-phone,
-.footer-grid a[href^="tel:"] .fa-phone,
+.footer-grid a[href^="tel:"] .fa-phone {
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .mobile-bar a[href^="tel:"] .fa-phone {
   font-size: 1rem;
   line-height: 1;
+  color: #ffffff;
+  opacity: 1;
 }
 
 .footer-grid a[href^="tel:"] .fa-phone {
