@@ -18,7 +18,8 @@
   <meta name="twitter:image" content="https://airfix.pt/assets/stitch/hero-desktop-1920.webp" />
   <link rel="icon" href="assets/airfix-icon.png" type="image/png" />
   <script type="application/ld+json">
-{
+[
+    {
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Instalação de ar condicionado em Seixal",
@@ -31,7 +32,38 @@
   },
   "areaServed": "Distrito de Lisboa e Distrito de Setúbal",
   "description": "Serviço de climatização em Seixal"
-}
+},
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Fazem deslocação a Seixal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, Seixal faz parte da nossa área habitual no distrito de Lisboa e Setúbal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo demora o orçamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Respondemos por WhatsApp com brevidade, muitas vezes no mesmo dia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Também fazem limpeza e manutenção?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Veja as nossas páginas de limpeza, manutenção e reparação."
+          }
+        }
+      ]
+    }
+  ]
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,23 +83,23 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a class="logo" href="index.html" aria-label="AirFix página inicial">
-        <img class="logo-img" src="assets/airfix-logo-main.png" alt="AirFix — Climatização e Ar Condicionado" width="200" height="56" />
+        <img class="logo-img" src="assets/airfix-logo-main.png" alt="AirFix.pt — Limpeza de Ar Condicionado" width="200" height="56" />
       </a>
 
       <nav class="main-nav site-header__nav" aria-label="Menu principal">
         <a href="index.html">Início</a>
-        <a href="instalacao-ar-condicionado.html">Instalação</a>
-        <a href="manutencao-ar-condicionado.html">Manutenção</a>
         <a href="limpeza-ar-condicionado.html">Limpeza</a>
+        <a href="manutencao-ar-condicionado.html">Manutenção</a>
+        <a href="instalacao-ar-condicionado.html">Instalação</a>
         <a href="index.html#contacto">Contactos</a>
       </nav>
 
       <div class="header-actions site-header__actions">
-        <a class="header-phone" href="tel:+351932504112" aria-label="Ligar para AirFix">
+        <a class="header-phone" href="tel:+351932504112" aria-label="Ligar para AirFix" data-track="click_ligar" data-track-location="header">
           <i class="fa-solid fa-phone" aria-hidden="true"></i>
           <span>932 504 112</span>
         </a>
-        <a class="header-cta btn btn--header" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento." aria-label="Pedir orçamento por WhatsApp">Pedir Orçamento</a>
+        <a class="header-cta btn btn--header" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." aria-label="Pedir orçamento por WhatsApp" data-track="click_whatsapp" data-track-location="header">Pedir Orçamento</a>
       </div>
 
       <button class="menu-btn site-header__menu-btn" type="button" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
@@ -77,14 +109,14 @@
 
     <nav class="mobile-nav site-header__mobile-nav" id="mobileNav" aria-label="Menu mobile">
       <a href="index.html">Início</a>
-      <a href="instalacao-ar-condicionado.html">Instalação</a>
-      <a href="manutencao-ar-condicionado.html">Manutenção</a>
       <a href="limpeza-ar-condicionado.html">Limpeza</a>
+      <a href="manutencao-ar-condicionado.html">Manutenção</a>
+      <a href="instalacao-ar-condicionado.html">Instalação</a>
       <a href="index.html#contacto">Contactos</a>
-      <a class="mobile-nav-cta site-header__mobile-cta" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento.">
+      <a class="mobile-nav-cta site-header__mobile-cta" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." data-track="click_whatsapp" data-track-location="header">
         <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
       </a>
-      <a class="mobile-nav-phone site-header__mobile-cta" href="tel:+351932504112" aria-label="Ligar para 932 504 112">
+      <a class="mobile-nav-phone site-header__mobile-cta" href="tel:+351932504112" aria-label="Ligar para 932 504 112" data-track="click_ligar" data-track-location="header">
         <i class="fa-solid fa-phone" aria-hidden="true"></i> 932 504 112
       </a>
     </nav>
@@ -101,7 +133,7 @@
         <span class="section-eyebrow">Seixal</span>
         <h1>Instalação de Ar Condicionado em Seixal</h1>
         <p class="page-hero__lead">Instalação, manutenção, limpeza e reparação de ar condicionado em Seixal e zonas próximas. Orçamento rápido por WhatsApp.</p>
-        <a class="btn btn--whatsapp" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento." aria-label="Pedir orçamento por WhatsApp">
+        <a class="btn btn--whatsapp" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." aria-label="Pedir orçamento por WhatsApp" data-track="click_whatsapp">
           <i class="fab fa-whatsapp" aria-hidden="true"></i>
           Pedir Orçamento por WhatsApp
         </a>
@@ -115,39 +147,38 @@
 <p>A AirFix.pt presta serviço técnico de instalação, manutenção, limpeza e reparação de ar condicionado em <strong>Seixal</strong> e zonas próximas, no distrito de Lisboa e Setúbal.</p>
           <h2>Serviços disponíveis em Seixal</h2>
           <ul>
-            <li>Instalação de ar condicionado split e multi-split</li>
+            <li>Lavagem e limpeza profunda de splits</li>
             <li>Manutenção preventiva e reparação de avarias</li>
-            <li>Limpeza e higienização de unidades interiores</li>
+            <li>Instalação de ar condicionado split e multi-split</li>
             <li>Assistência para casas, apartamentos, lojas e escritórios</li>
           </ul>
           <h2>Zonas próximas que também cobrimos</h2>
           <p>Atendemos regularmente clientes em Seixal, Amora, Corroios, Arrentela e Quinta do Conde, entre outras localidades da região.</p>
           <h2>Porque escolher a AirFix</h2>
           <ul>
-            <li>Instalação limpa com acabamentos profissionais</li>
+            <li>Limpeza profunda e instalação com acabamentos profissionais</li>
             <li>Orçamento claro antes de avançar</li>
             <li>Resposta rápida por WhatsApp</li>
             <li>Equipa experiente em climatização residencial e comercial</li>
           </ul>
-          <p>Peça orçamento indicando a sua morada em Seixal e o tipo de divisão ou negócio.</p>
+          <p>Peça orçamento indicando a sua morada em Seixal e o tipo de serviço (limpeza, manutenção ou instalação).</p>
         </div>
 
         <section class="page-faq" aria-labelledby="faq-title">
           <h2 id="faq-title">Perguntas frequentes</h2>
           <details class="faq-item"><summary>Fazem deslocação a Seixal?</summary><p>Sim, Seixal faz parte da nossa área habitual no distrito de Lisboa e Setúbal.</p></details>
           <details class="faq-item"><summary>Quanto tempo demora o orçamento?</summary><p>Respondemos por WhatsApp com brevidade, muitas vezes no mesmo dia.</p></details>
-          <details class="faq-item"><summary>Também fazem manutenção e reparação?</summary><p>Sim. Veja as nossas páginas de manutenção, limpeza e reparação.</p></details>
+          <details class="faq-item"><summary>Também fazem limpeza e manutenção?</summary><p>Sim. Veja as nossas páginas de limpeza, manutenção e reparação.</p></details>
         </section>
 
         <section class="page-related" aria-labelledby="related-title">
           <h2 id="related-title">Também pode interessar</h2>
           <ul class="page-related__list">
-          <li><a href="instalacao-ar-condicionado.html">Instalação de ar condicionado</a></li>
+          <li><a href="limpeza-ar-condicionado.html">Lavagem e limpeza profunda</a></li>
+          <li><a href="limpeza-ar-condicionado-seixal.html">Limpeza em Seixal</a></li>
           <li><a href="manutencao-ar-condicionado.html">Manutenção de ar condicionado</a></li>
-          <li><a href="limpeza-ar-condicionado.html">Limpeza e higienização</a></li>
-          <li><a href="reparacao-ar-condicionado.html">Reparação de avarias</a></li>
+          <li><a href="instalacao-ar-condicionado.html">Instalação de ar condicionado</a></li>
           <li><a href="instalacao-ar-condicionado-lisboa.html">Instalação em Lisboa</a></li>
-          <li><a href="instalacao-ar-condicionado-almada.html">Instalação em Almada</a></li>
           <li><a href="index.html">Homepage AirFix.pt</a></li>
           </ul>
         </section>
@@ -161,7 +192,7 @@
             <h2>Precisa de ajuda com o seu ar condicionado?</h2>
             <p>Peça orçamento por WhatsApp e receba uma resposta rápida da equipa AirFix.</p>
           </div>
-          <a class="btn btn--whatsapp" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento." aria-label="Pedir orçamento por WhatsApp">
+          <a class="btn btn--whatsapp" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." aria-label="Pedir orçamento por WhatsApp" data-track="click_whatsapp">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
             Pedir Orçamento por WhatsApp
           </a>
@@ -174,14 +205,14 @@
     <div class="container footer-grid">
       <div>
         <img class="footer-logo" src="assets/airfix-logo-white.png" alt="AirFix" width="160" height="52" />
-        <p>Instalação, manutenção, limpeza e reparação de ar condicionado no distrito de Lisboa e Setúbal.</p>
+        <p>Limpeza, lavagem e manutenção de ar condicionado no distrito de Lisboa e Setúbal. Também fazemos instalação e reparação.</p>
       </div>
       <div>
         <h4>Serviços</h4>
         <nav>
-          <a href="instalacao-ar-condicionado.html">Instalação</a>
-          <a href="manutencao-ar-condicionado.html">Manutenção</a>
           <a href="limpeza-ar-condicionado.html">Limpeza</a>
+          <a href="manutencao-ar-condicionado.html">Manutenção</a>
+          <a href="instalacao-ar-condicionado.html">Instalação</a>
           <a href="reparacao-ar-condicionado.html">Reparação</a>
           <a href="ar-condicionado-empresas.html">Empresas</a>
         </nav>
@@ -189,10 +220,10 @@
       <div>
         <h4>Guias</h4>
         <nav>
-          <a href="quanto-custa-instalar-ar-condicionado.html">Quanto custa instalar?</a>
+          <a href="limpeza-filtros-ar-condicionado.html">Limpeza de filtros</a>
           <a href="de-quanto-em-quanto-tempo-fazer-manutencao-ar-condicionado.html">Periodicidade manutenção</a>
           <a href="ar-condicionado-nao-arrefece.html">Não arrefece?</a>
-          <a href="limpeza-filtros-ar-condicionado.html">Limpeza de filtros</a>
+          <a href="quanto-custa-instalar-ar-condicionado.html">Quanto custa instalar?</a>
           <a href="tecnico-certificado-ar-condicionado.html">Técnico certificado</a>
         </nav>
       </div>
@@ -207,13 +238,13 @@
       <div>
         <h4>Contactos</h4>
         <nav>
-          <a href="tel:+351932504112" aria-label="Ligar para 932 504 112">
+          <a href="tel:+351932504112" aria-label="Ligar para 932 504 112" data-track="click_ligar" data-track-location="contact_section">
             <i class="fa-solid fa-phone" aria-hidden="true"></i> 932 504 112
           </a>
-          <a href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento." aria-label="Contactar por WhatsApp">
+          <a href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." aria-label="Contactar por WhatsApp" data-track="click_whatsapp" data-track-location="contact_section">
             <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
           </a>
-          <a href="mailto:geral@airfix.pt" aria-label="Enviar email para geral@airfix.pt">
+          <a href="mailto:geral@airfix.pt" aria-label="Enviar email para geral@airfix.pt" data-track="click_email" data-track-location="contact_section">
             <svg aria-hidden="true"><use href="#icon-mail"/></svg> geral@airfix.pt
           </a>
         </nav>
@@ -224,25 +255,27 @@
     </div>
   </footer>
 
-  <a class="floating-wa" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento." aria-label="Contactar por WhatsApp">
+  <a class="floating-wa" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." aria-label="Contactar por WhatsApp" data-track="click_whatsapp" data-track-location="floating">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <nav class="mobile-bar" aria-label="Ações rápidas mobile">
-    <a class="mobile-bar-wa" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento." aria-label="Contactar por WhatsApp">
+    <a class="mobile-bar-wa" href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." aria-label="Contactar por WhatsApp" data-track="click_whatsapp" data-track-location="contact_section">
       <i class="fab fa-whatsapp" aria-hidden="true"></i>
       WhatsApp
     </a>
-    <a href="tel:+351932504112" aria-label="Ligar para 932 504 112">
+    <a href="tel:+351932504112" aria-label="Ligar para 932 504 112" data-track="click_ligar" data-track-location="header">
       <i class="fa-solid fa-phone" aria-hidden="true"></i>
       Ligar
     </a>
-    <a href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento." aria-label="Pedir orçamento por WhatsApp">
+    <a href="https://wa.me/351932504112?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." aria-label="Pedir orçamento por WhatsApp" data-track="click_pedir_orcamento" data-track-location="header">
       <i class="fab fa-whatsapp" aria-hidden="true"></i>
       Orçamento
     </a>
   </nav>
 
+  <script src="js/tracking-config.js" defer></script>
+  <script src="js/tracking.js" defer></script>
   <script src="js/airfix-site.js" defer></script>
 
 </body>

@@ -56,16 +56,16 @@
 
       <nav class="main-nav site-header__nav" aria-label="Main menu">
         <a href="./">Home</a>
-        <a href="./#servicos">Services</a>
+        <a href="./#servicos" data-track="click_ver_servicos">Services</a>
         <a href="./#contacto">Contacts</a>
       </nav>
 
       <div class="header-actions site-header__actions">
-        <a class="header-phone" href="tel:+351932504112" aria-label="Call AirFix">
+        <a class="header-phone" href="tel:+351932504112" aria-label="Call AirFix" data-track="click_ligar" data-track-location="header">
           <i class="fa-solid fa-phone" aria-hidden="true"></i>
           <span>932 504 112</span>
         </a>
-        <a class="header-cta btn btn--header" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Request a quote on WhatsApp">Request a quote</a>
+        <a class="header-cta btn btn--header" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Request a quote on WhatsApp" data-track="click_whatsapp" data-track-location="header">Request a quote</a>
       </div>
 
       <button class="menu-btn site-header__menu-btn" type="button" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
@@ -75,12 +75,12 @@
 
     <nav class="mobile-nav site-header__mobile-nav" id="mobileNav" aria-label="Mobile menu">
       <a href="./">Home</a>
-      <a href="./#servicos">Services</a>
+      <a href="./#servicos" data-track="click_ver_servicos">Services</a>
       <a href="./#contacto">Contacts</a>
-      <a class="mobile-nav-cta site-header__mobile-cta" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon.">
+      <a class="mobile-nav-cta site-header__mobile-cta" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." data-track="click_whatsapp" data-track-location="header">
         <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
       </a>
-      <a class="mobile-nav-phone site-header__mobile-cta" href="tel:+351932504112" aria-label="Call 932 504 112">
+      <a class="mobile-nav-phone site-header__mobile-cta" href="tel:+351932504112" aria-label="Call 932 504 112" data-track="click_ligar" data-track-location="header">
         <i class="fa-solid fa-phone" aria-hidden="true"></i> 932 504 112
       </a>
     </nav>
@@ -101,7 +101,7 @@
           <i class="fa-solid fa-globe" aria-hidden="true"></i>
           <span>English-speaking air conditioning repair service in Lisbon and surrounding areas</span>
         </p>
-        <a class="btn btn--whatsapp" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Request a quote on WhatsApp">
+        <a class="btn btn--whatsapp" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Request a quote on WhatsApp" data-track="click_whatsapp" data-track-location="hero">
           <i class="fab fa-whatsapp" aria-hidden="true"></i>
           Request a quote on WhatsApp
         </a>
@@ -112,7 +112,7 @@
       <div class="container page-content__inner">
         <div class="page-prose">
           <p>When an air conditioner stops cooling properly, makes unusual noises or shows other faults, AirFix.pt provides diagnosis and repair in Lisbon and the surrounding areas, across the Lisbon and Setúbal districts.</p>
-          <p>You can contact us on WhatsApp — photos or a short video of the indoor and outdoor units help us assess the situation faster. Call <a href="tel:+351932504112">+351 932 504 112</a> if you prefer to speak by phone.</p>
+          <p>You can contact us on WhatsApp — photos or a short video of the indoor and outdoor units help us assess the situation faster. Call <a href="tel:+351932504112" data-track="click_ligar" data-track-location="contact_section">+351 932 504 112</a> if you prefer to speak by phone.</p>
 
           <h2>Common symptoms that call for a diagnosis</h2>
           <p>These situations do not identify the fault by themselves, but they are frequent reasons to request a technical check:</p>
@@ -144,7 +144,7 @@
           <h2 id="related-title">Related links</h2>
           <ul class="page-related__list">
             <li><a href="./">AirFix.pt English homepage</a></li>
-            <li><a href="./#servicos">Services overview</a></li>
+            <li><a href="./#servicos" data-track="click_ver_servicos">Services overview</a></li>
             <li><a href="./#contacto">Contact</a></li>
             <li><a href="../reparacao-ar-condicionado.html">Reparação de ar condicionado (PT)</a></li>
           </ul>
@@ -159,7 +159,7 @@
             <h2>Need air conditioning repair in Lisbon?</h2>
             <p>Request a quote on WhatsApp and get a clear response from the AirFix team.</p>
           </div>
-          <a class="btn btn--whatsapp" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Request a quote on WhatsApp">
+          <a class="btn btn--whatsapp" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Request a quote on WhatsApp" data-track="click_whatsapp">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
             Request a quote on WhatsApp
           </a>
@@ -188,7 +188,7 @@
       <div>
         <h4>Services</h4>
         <nav>
-          <a href="./#servicos">Overview</a>
+          <a href="./#servicos" data-track="click_ver_servicos">Overview</a>
           <a href="./#instalacao">Installation</a>
           <a href="./#manutencao">Maintenance</a>
           <a href="air-conditioning-repair-lisbon.html">Repair in Lisbon</a>
@@ -205,13 +205,13 @@
       <div>
         <h4>Contacts</h4>
         <nav>
-          <a href="tel:+351932504112" aria-label="Call 932 504 112">
+          <a href="tel:+351932504112" aria-label="Call 932 504 112" data-track="click_ligar" data-track-location="contact_section">
             <i class="fa-solid fa-phone" aria-hidden="true"></i> 932 504 112
           </a>
-          <a href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Contact via WhatsApp">
+          <a href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Contact via WhatsApp" data-track="click_whatsapp" data-track-location="contact_section">
             <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
           </a>
-          <a href="mailto:geral@airfix.pt" aria-label="Send email to geral@airfix.pt">
+          <a href="mailto:geral@airfix.pt" aria-label="Send email to geral@airfix.pt" data-track="click_email" data-track-location="contact_section">
             <svg aria-hidden="true"><use href="#icon-mail"/></svg> geral@airfix.pt
           </a>
         </nav>
@@ -222,26 +222,28 @@
     </div>
   </footer>
 
-  <a class="floating-wa" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Contact via WhatsApp">
+  <a class="floating-wa" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Contact via WhatsApp" data-track="click_whatsapp" data-track-location="floating">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <nav class="mobile-bar" aria-label="Mobile quick actions">
-    <a class="mobile-bar-wa" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Contact via WhatsApp">
+    <a class="mobile-bar-wa" href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Contact via WhatsApp" data-track="click_whatsapp" data-track-location="contact_section">
       <i class="fab fa-whatsapp" aria-hidden="true"></i>
       WhatsApp
     </a>
-    <a href="tel:+351932504112" aria-label="Call 932 504 112">
+    <a href="tel:+351932504112" aria-label="Call 932 504 112" data-track="click_ligar" data-track-location="contact_section">
       <i class="fa-solid fa-phone" aria-hidden="true"></i>
       Call
     </a>
-    <a href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Request a quote on WhatsApp">
+    <a href="https://wa.me/351932504112?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20air%20conditioning%20repair%20in%20Lisbon." aria-label="Request a quote on WhatsApp" data-track="click_whatsapp">
       <i class="fab fa-whatsapp" aria-hidden="true"></i>
       Quote
     </a>
   </nav>
 
-  <script src="../js/airfix-site.js" defer></script>
+  <script src="../js/tracking-config.js" defer></script>
+    <script src="../js/tracking.js" defer></script>
+    <script src="../js/airfix-site.js" defer></script>
 
 </body>
 </html>
